@@ -1,9 +1,5 @@
 if getgenv().auto == nil then getgenv().auto=true end
 if not getgenv().speed or type(getgenv().speed) ~= "number" then getgenv().speed = 25 end
-if ngetgenv().antiafk == false then 
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/awesomedude939/essential/main/anti_afk.lua",true))()
-  getgenv().antiafk = true
-end
 
 local ts = game:GetService("TweenService")
 local plr = game:GetService("Players").LocalPlayer
@@ -13,6 +9,7 @@ game.Workspace.Gravity = 0
 
 repeat
 if getgenv().auto == false then break end
+game.Workspace.Gravity = 0
 char.Humanoid:ChangeState(11)
 local t1 = ts:Create(char.HumanoidRootPart,TweenInfo.new(0.05),{CFrame = CFrame.new(-57,74,785)})
 local t2 = ts:Create(char.HumanoidRootPart,TweenInfo.new(getgenv().speed-4),{CFrame = CFrame.new(-57,74,8957)})
@@ -26,6 +23,7 @@ t2.Completed:Wait()
 t3:Play()
 t3.Completed:Wait()
 t3:Pause()
+game.Workspace.Gravity = 196.2
 end)
 if e then print(e) end
 plr.CharacterAdded:Wait()
