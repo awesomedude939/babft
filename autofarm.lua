@@ -1,5 +1,9 @@
 if getgenv().auto == nil then getgenv().auto=true end
 if not getgenv().speed or type(getgenv().speed) ~= "number" then getgenv().speed = 25 end
+if ngetgenv().antiafk == false then 
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/awesomedude939/essential/main/anti_afk.lua",true))()
+  getgenv().antiafk = true
+end
 
 local ts = game:GetService("TweenService")
 local plr = game:GetService("Players").LocalPlayer
