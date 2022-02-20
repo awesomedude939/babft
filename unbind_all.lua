@@ -30,7 +30,7 @@ UnbindAll.TextWrapped = true
 UnbindAll.Visible = false
 UnbindAll.MouseButton1Click:Connect(function()
 	local tool = char:FindFirstChild("BindTool")
-	if not tool then UnbindAll.Visible = false return end
+	if not tool then return end
 	local targets = {}
 	local obj
 	for i,v in pairs(tool.BItemOptionSBs:GetChildren()) do 
@@ -79,6 +79,7 @@ char.ChildRemoved:Connect(function(child)
 end)
 
 plr.CharacterAdded:Connect(function(c)
+	char = c
 	c.ChildAdded:Connect(function(child)
 		if child.Name == "BindTool" then 
 			ActivateGui()
