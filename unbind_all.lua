@@ -34,7 +34,7 @@ UnbindAll.MouseButton1Click:Connect(function()
 	local targets = {}
 	local obj
 	for i,v in pairs(tool.BItemOptionSBs:GetChildren()) do 
-		if v.Color3 == Color3.fromRGB(163, 172, 62) then 
+		if v.Color3 ~= Color3.fromRGB(155, 60, 172) then 
 			table.insert(targets, v.Adornee)
 		end
 	end
