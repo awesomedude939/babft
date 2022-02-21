@@ -53,7 +53,7 @@ UnbindAll.MouseButton1Click:Connect(function()
 		end)
 	end
 	end)
-        if not s then 
+        if s then 
 	print(e)
         end
 end)
