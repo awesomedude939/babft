@@ -29,6 +29,7 @@ UnbindAll.TextStrokeTransparency = 0.000
 UnbindAll.TextWrapped = true
 UnbindAll.Visible = false
 UnbindAll.MouseButton1Click:Connect(function()
+	pcall(function()
 	local tool = char:FindFirstChild("BindTool")
 	local targets = {}
 	local obj
@@ -51,6 +52,7 @@ UnbindAll.MouseButton1Click:Connect(function()
 			end
 		end)
 	end
+	end)
 end)
 
 UISizeConstraint.Parent = UnbindAll
