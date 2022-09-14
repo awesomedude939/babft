@@ -6,10 +6,14 @@ local UnbindAll = Instance.new("TextButton")
 local UISizeConstraint = Instance.new("UISizeConstraint")
 
 BindGui.Name = "BindGui"
-if syn then 
+if syn and not gethui() then 
 	syn.protect_gui(BindGui)
 end
-BindGui.Parent = game.CoreGui
+if not gethui() then
+    BindGui.Parent = game.CoreGui
+else 
+    BindGui.Parent = gethui()
+end
 BindGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 BindGui.DisplayOrder = 6
 
