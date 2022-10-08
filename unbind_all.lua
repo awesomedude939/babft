@@ -9,7 +9,7 @@ BindGui.Name = "BindGui"
 if syn and not gethui then 
 	syn.protect_gui(BindGui)
 end
-if not gethui() then
+if not gethui then
     BindGui.Parent = game.CoreGui
 else 
     BindGui.Parent = gethui()
