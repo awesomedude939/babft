@@ -6,7 +6,7 @@ local UnbindAll = Instance.new("TextButton")
 local UISizeConstraint = Instance.new("UISizeConstraint")
 
 BindGui.Name = "BindGui"
-if syn and not gethui() then 
+if syn and not gethui then 
 	syn.protect_gui(BindGui)
 end
 if not gethui() then
